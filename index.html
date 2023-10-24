@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <link rel="stylesheet" href="jquery.bxslider.css">
+    <link rel="stylesheet" href="colorbox.css">
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="jquery.colorbox.js"></script>
+    <script type="text/javascript" src="fullpage.js"></script>
+    <script src="jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                autoScrolling:true,
+                scrollHorizontally: true,
+                anchors: ['1Page', '2Page', '3Page','4Page'],
+                menu: '#myMenu',
+                navigation: true,
+                navigationPosition: 'right'
+            });   
+            
+            $('.close3').click(function(){
+                $('.title').hide();
+            });
+
+            
+            $('.group1').colorbox({width:'95%' ,height:'95%',rel:'group1'});
+            $('.group2').colorbox({rel:'group2',iframe:true,innerWidth:1280, innerHeight:720});
+
+            $('.bxslider').bxSlider({
+                mode: 'horizontal',
+                auto:true
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+<ul id="myMenu">
+    <li><a href="#1Page">1Page</a></li>
+    <li><a href="#2Page">2Page</a></li>
+    <li><a href="#3Page">3Page</a></li>
+    <li><a href="#4Page">4Page</a></li>
+</ul>
+        <div id="fullpage">
+        <div class="section">
+        </div>
+        <div class="section"></div>
+       
+        <div class="section">
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/LqdeuTzzRZY" title="영상편집 포트폴리오" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe>
+     
+        </div>
+        <div class="section">
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/CKmCKlWKhik" title="일러스트에 에프터이펙트" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/XG-99tcifHo" title="무이네 선라이즈 투어" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ 
+     
+        </div>
+    
+    </div>
+
+</body>
+</html>
+
